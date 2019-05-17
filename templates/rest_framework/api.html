@@ -1,0 +1,10 @@
+{% extends "rest_framework/base.html" %}
+
+{% block branding %}
+    <h3>Prueba Cactus</h3>
+    {% if not request.user.is_authenticated %}
+    <div class="pull-right" style="margin: 15px;">
+        <a href="/accounts/google/login/" style="color:white;">Login with Google</a>
+    </div>
+    {% endif %}
+{% endblock %}
